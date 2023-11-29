@@ -93,10 +93,10 @@ const Day = () => {
       <div className="mt-12">
         <div>{dailyData.sentences[currentPage].english}</div>
         <button
-          className={`${!isVisible && "bg-black"}`}
+          className="mt-2 font-thin"
           onClick={() => setIsVisible(!isVisible)}
         >
-          {dailyData.sentences[currentPage].korean}
+          {!isVisible ? "해설보기" : dailyData.sentences[currentPage].korean}
         </button>
         <div className="mt-4">
           <button className="btn-style" onClick={onClickPrev}>
